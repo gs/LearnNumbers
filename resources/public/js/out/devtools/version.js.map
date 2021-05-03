@@ -1,0 +1,1 @@
+{"version":3,"file":"\/Users\/sfistak\/Code\/clojure\/learn-numbers\/resources\/public\/js\/out\/devtools\/version.js","sources":["version.cljs?rel=1620066997889"],"lineCount":9,"mappings":";AAAA;;AAGA,AAAKA,mCAAgB;AAErB,uCAAA,vCAAMC;AAAN,AACED","names":["devtools.version\/current-version","devtools.version\/get-current-version"]}
