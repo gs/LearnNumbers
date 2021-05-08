@@ -25,7 +25,7 @@
   (def filename (str "flags/" lang ".png"))
   [:span {:padding "10px 10px 10px 10px"}
    [:img {
-          :src filename 
+          :src filename
           :width "50px"
           :height "50px"
           :on-click #(speak-it lang)}]]
@@ -33,16 +33,26 @@
   )
 
 (defn app-container []
-  [:div.center
-   [:h1 "Nauka liczb w roznych jezykach"]
-   [:h2 @number]
-   (flag-element "pl-PL")
-   (flag-element "de-DE")
-   (flag-element "en-US")
-   [:br]
-   [:audio {:id "audio1" :src ""}]
-   [:input {:type "button" :value "One more time"
-            :on-click #(swap! number change-me)}]])
+  [:div.section
+   [:div.container
+    [:div.columns
+      [:div.column.has-text-centered
+      [:h1.title "Nauka liczb w roznych jezykach"]]]
+    [:div.columns
+     [:div.column.has-background-danger-dark.has-text-centered
+      [:h1.has-text-white {:style {:font-size "14rem"}} @number]]
+     [:div.column
+      [:div.buttons
+       [:input {:type "button" :class "button is-success" :value "One more time"
+               :on-click #(swap! number change-me)}]]]]
+    [:div.columns
+      [:div.column
+      (flag-element "pl-PL")]
+     [:div.column
+      (flag-element "de-DE")]
+     [:div.column
+    (flag-element "en-US")]]
+    [:audio {:id "audio1" :src ""}]]])
 
 (rd/render [app-container]
            (. js/document (getElementById "app")))
