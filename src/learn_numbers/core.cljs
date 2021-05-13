@@ -44,13 +44,14 @@
    [:div.container
     [:div.columns
       [:div.column.has-text-centered
-       [:h1.title "Naucz sie cyfrow"]]]]
+       [:h1.title "Naucz sie cyfrów / Learn numbers"]]]]
+   [:br][:br]
    [:div.columns
     [:div.column.has-background-danger-dark.has-text-centered
      [:h1.has-text-white {:style {:font-size "14rem"}} @number]]
     [:div.column
      [:div.buttons
-      [:input {:type "button" :class "button is-success" :value "Inna cyfra"
+      [:input {:type "button" :class "button is-success" :value "Nowa cyfra / New number"
                :on-click #(swap! number change-me)}]]]]
    [:div.columns
      [:div.column
