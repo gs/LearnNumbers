@@ -13,3 +13,4 @@ node_modules/
 .repl
 .nrepl-port
 .DS_Store
+/resources/public/js/out/
