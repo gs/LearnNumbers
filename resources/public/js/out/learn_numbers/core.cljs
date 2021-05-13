@@ -1,5 +1,5 @@
 (ns learn-numbers.core
-  (:require 
+  (:require
    [reagent.core :as reagent :refer [atom]]
    [reagent.dom :as rd]))
 
@@ -36,8 +36,6 @@
           :height "250px"
           :on-click #(speak-it lang)
           :alt lang}]])
-
-  
 
 (defn app-container []
   [:div.section
