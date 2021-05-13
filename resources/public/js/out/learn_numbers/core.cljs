@@ -17,7 +17,7 @@
 
 
 (defn change-me []
-  (rand-int 100))
+  (rand-int 101))
 
 (defn flag-element
   "render the flag element"
@@ -26,9 +26,10 @@
   [:span {:padding "10px 10px 10px 10px"}
    [:img {
           :src filename
-          :width "50px"
-          :height "50px"
-          :on-click #(speak-it lang)}]]
+          :width "250px"
+          :height "250px"
+          :on-click #(speak-it lang)
+          :alt lang}]]
 
   )
 
@@ -37,13 +38,13 @@
    [:div.container
     [:div.columns
       [:div.column.has-text-centered
-      [:h1.title "Nauka liczb w roznych jezykach"]]]
+      [:h1.title "Naucz sie cyfrow"]]]]
     [:div.columns
      [:div.column.has-background-danger-dark.has-text-centered
       [:h1.has-text-white {:style {:font-size "14rem"}} @number]]
      [:div.column
       [:div.buttons
-       [:input {:type "button" :class "button is-success" :value "One more time"
+       [:input {:type "button" :class "button is-success" :value "Inna cyfra"
                :on-click #(swap! number change-me)}]]]]
     [:div.columns
       [:div.column
@@ -51,7 +52,11 @@
      [:div.column
       (flag-element "de-DE")]
      [:div.column
-    (flag-element "en-US")]]
+      (flag-element "en-US")]
+     [:div.column
+      (flag-element "it-IT")]
+     [:div.column
+      (flag-element "es-ES")]
     [:audio {:id "audio1" :src ""}]]])
 
 (rd/render [app-container]

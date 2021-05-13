@@ -12,3 +12,4 @@ node_modules/
 .lein-plugins/
 .repl
 .nrepl-port
+.DS_Store
