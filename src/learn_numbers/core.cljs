@@ -12,7 +12,7 @@
    "pl-PL" "Polska / Poland",
    "de-DE" "Niemcy / Germany",
    "it-IT" "Włochy / Italy",
-   "es-ES" "Kostarica / Costa Rica"})
+   "es-ES" "Kostaryka / Costa Rica"})
 
 (defn speak-it
   "Call the google translate with language and value of the atom"
