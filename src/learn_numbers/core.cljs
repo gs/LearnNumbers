@@ -42,7 +42,7 @@
    [:div.container
     [:div.columns
       [:div.column.has-text-centered
-       [:h1.title "Naucz sie cyfrów / Learn numbers"]]]]
+       [:h1.title "Naucz sie cyfr / Learn numbers"]]]]
    [:br][:br]
    [:div.columns
     [:div.column.has-background-danger-dark.has-text-centered
