@@ -17,8 +17,8 @@
 (defn speak-it
   "Call the google translate with language and value of the atom"
   [lang]
-  (let [speech-syn (.-speechSynthesis js/window)]
-    (def msg (js/SpeechSynthesisUtterance. @number))
+  (let [speech-syn (.-speechSynthesis js/window)
+        msg (js/SpeechSynthesisUtterance. @number)]
     (aset msg "lang" lang)
     (.speak speech-syn msg)))
 
@@ -28,10 +28,9 @@
 (defn flag-element
   "render the flag element"
   [lang]
-  (def filename (str "flags/" lang ".png"))
-  [:span.has-text-white.has-background-primary-dark {:padding "10px 10px 10px 10px"} (lang-to-country lang)
-   [:img {
-          :src filename
+  [:span.has-text-white.has-background-primary-dark {:padding "10px 10px 10px 10px"}
+   (lang-to-country lang)
+   [:img {:src (str "flags/" lang ".png")
           :width "250px"
           :height "250px"
           :on-click #(speak-it lang)
